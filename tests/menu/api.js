@@ -24,7 +24,7 @@ var onLoadMenu;
 
 function Load() {
     isRaised = true;
-     onLoadMenu = getMenu();
+    onLoadMenu = getMenu();
 }
 
 
@@ -162,7 +162,7 @@ test('leaving item root outside viewport left direction viewport closes it and r
     })
 
     jasmine.clock().tick();
-    menu._mouseleave({ currentTarget: item[0], target: item.find("span.k-link")[0], clientX: -1,});
+    menu._mouseleave({ currentTarget: item[0], target: item.find("span.k-link")[0], clientX: -1});
 
     jasmine.clock().tick();
     jasmine.clock().uninstall();

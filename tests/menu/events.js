@@ -92,7 +92,7 @@ module("menu events", {
 });
 
 asyncTest("close event can be canceled", 1, function() {
-    menu.bind("close", function (e) { e.preventDefault() });
+    menu.bind("close", function (e) { e.preventDefault(); });
 
     menu.bind("activate", function() {
         menu.close(menu.element.children("li:eq(2)"));
@@ -146,7 +146,7 @@ test('clicking disabled item should not raise onSelect event on parent item', fu
 });
 
 asyncTest("open event can be canceled", 1, function() {
-    menu.bind("open", function (e) { e.preventDefault() });
+    menu.bind("open", function (e) { e.preventDefault(); });
     menu.open(menu.element.children("li:first"));
 
     setTimeout(function () {
@@ -174,7 +174,7 @@ test("item select is triggered when items are loaded via dataSource", function()
                         items: [
                             {
                                 text: "Item 3",
-                                select: raiseCount,
+                                select: raiseCount
                             }
                         ]
                     }

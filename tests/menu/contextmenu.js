@@ -1,7 +1,7 @@
 (function() {
 
     function getRootItem(index) {
-        return $('#menu').find('> .k-item > .k-link').eq(index)
+        return $('#menu').find('> .k-item > .k-link').eq(index);
     }
 
     var menu;
@@ -317,6 +317,7 @@
         menu.destroy();
 
         ok(!menu._overflowWrapper());
+        removeMocksIn(kendo.ui.ContextMenu.fn);
     });
 
 })();
